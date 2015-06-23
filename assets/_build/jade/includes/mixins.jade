@@ -1,80 +1,80 @@
 //- Bootstrap Breadcrumb
 mixin breadcrumb
-    ol.breadcrumb
-        li: a(href='index.html') Startseite
-        block
+  ol.breadcrumb
+    li: a(href='index.html') Startseite
+    block
 
 //- Bootstrap Alerts
 mixin alert(style)
-    div( class=["alert", "alert-dismissable", "alert-" + style] )
-        button.close( type="button", data-dismiss="alert" ) ×
-        block
+  div( class=["alert", "alert-dismissable", "alert-" + style] )
+    button.close( type="button", data-dismiss="alert" ) ×
+    block
 
 //- Bootstrap Panel + Panelbody
 mixin panel(heading, style)
-    - var style = (typeof style === 'undefined') ? "default" : style
-    div( class=["panel", "panel-" + style] )
-        .panel-heading
-            h4!= heading
-        .panel-body
-            if block
-                block
-            else
-                +alert('warning') Kein Inhalt!
+  - var style = (typeof style === 'undefined') ? "default" : style
+  div( class=["panel", "panel-" + style] )
+    .panel-heading
+      h4!= heading
+    .panel-body
+      if block
+        block
+      else
+        +alert('warning') Kein Inhalt!
 
 //- Bootstrap Panel ohne Panelbody
 mixin panelob(heading, style)
-    - var style = (typeof style === 'undefined') ? "default" : style
-    div( class=["panel", "panel-" + style] )&attributes(attributes)
-        .panel-heading
-            h3.panel-title!= heading
-        if block
-            block
-        else
-            +alert('warning') Kein Inhalt!
+  - var style = (typeof style === 'undefined') ? "default" : style
+  div( class=["panel", "panel-" + style] )&attributes(attributes)
+    .panel-heading
+      h3.panel-title!= heading
+    if block
+      block
+    else
+      +alert('warning') Kein Inhalt!
 
 
 
 //- Bootstrap Form-Group
 mixin form-group (type, id, label, placeholder, col)
-    .form-group(class=col)
-        label(for=id)= label
-        
-        if type == "textarea"
-            textarea.form-control(id=id, placeholder=placeholder)
-        else
-            input.form-control(type=type, id=id, placeholder=placeholder)
+  .form-group(class=col)
+    label(for=id)= label
+      
+    if type == "textarea"
+      textarea.form-control(id=id, placeholder=placeholder)
+    else
+      input.form-control(type=type, id=id, placeholder=placeholder)
 
 //- Booterap Form-Group mit Addon
 mixin form-group-addon (type, id, label, placeholder, col, addon)
-    .form-group(class=col)
-        label(for=id)= label
-        .input-group
-            input.form-control(type=type, id=id, placeholder=placeholder)
-            span.input-group-addon= addon
+  .form-group(class=col)
+    label(for=id)= label
+    .input-group
+      input.form-control(type=type, id=id, placeholder=placeholder)
+      span.input-group-addon= addon
 
 //- Booterap Form-Group mit Addon Icon von Fontawesome
 mixin form-group-addon-icon (type, id, label, placeholder, col, addon)
-    .form-group(class=col)
-        label(for=id)= label
-        .input-group
-            input.form-control(type=type, id=id, placeholder=placeholder)
-            span.input-group-addon
-                i.fa(class=addon)
+  .form-group(class=col)
+    label(for=id)= label
+    .input-group
+      input.form-control(type=type, id=id, placeholder=placeholder)
+      span.input-group-addon
+        i.fa(class=addon)
 
 
 //- Bootstrap Button
 mixin btn (style, type)
-    - var style = (typeof style === 'undefined') || (style == '')   ? "default" : style
-    - var type  = (typeof type === 'undefined')  || (type == '')    ? "button" : type
+  - var style = (typeof style === 'undefined') || (style == '')   ? "default" : style
+  - var type  = (typeof type === 'undefined')  || (type == '')    ? "button" : type
     
-    button(type=type, class=["btn", "btn-" + style])&attributes(attributes)
-        block
+  button(type=type, class=["btn", "btn-" + style])&attributes(attributes)
+    block
 
 //- Bootstrap Link wie Button
 mixin abtn (style, href)
-    - var style = (typeof style === 'undefined') || (style == '')   ? "default" : style
-    - var href  = (typeof href === 'undefined')  || (href == '')    ? "#" : href
+  - var style = (typeof style === 'undefined') || (style == '')   ? "default" : style
+  - var href  = (typeof href === 'undefined')  || (href == '')    ? "#" : href
 
-    a(href=href, class=["btn", "btn-" + style])&attributes(attributes)
-        block
+  a(href=href, class=["btn", "btn-" + style])&attributes(attributes)
+    block
