@@ -1,0 +1,88 @@
+//- Seiten Variablen
+- var currentUrl = '/blog-post.html'
+- var sitename = 'Blog Beitrag'
+//- Seiten Variablen
+
+doctype html
+html(lang="de")
+
+    include ./includes/head.jade
+
+    body#page-top
+        .site-wrapper
+            
+            include ./includes/nav/nav.jade
+            
+            .container
+                
+                .page-header: h1 Blog Post <small>Beitragsansicht</small>
+                +breadcrumb
+                    li: a(href='blog-home-1.html') Blog
+                    li.active Blogpost
+                
+                .row
+                    .col-md-8
+                        hr
+                        p <i class="fa fa-clock-o"><!----></i> Beitrag vom <time datetime="2015-01-28">28. Januar 2015</time>
+                        p <i class="fa fa-user"><!----></i> geschrieben von <a href="#" title="...">Tomasz Dudek</a>
+                        hr
+                        img.img-responsive.img-thumbnail(src="assets/img/placeholder.jpg", alt="...")
+                        hr
+                        p.lead Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        hr
+                        
+                        //- Blog Kommentar Formular
+                        .well
+                            h4 Den Beitrag kommentieren...
+                            form(role="form")
+                                .row
+                                    .form-group.col-md-6
+                                        label(for="name") Dein Name
+                                        input#name.form-control(type="text")
+                                    .form-group.col-md-6
+                                        label(for="mail") Deine E-Mail Adresse
+                                        input#mail.form-control(type="email")
+                                .form-group
+                                    label(for="comment") Kommentar
+                                    textarea#comment.form-control(rows="3")
+                                button.btn.btn-primary(type="submit") Absenden
+                        
+                        //- Kommentare
+                        .media
+                            a.pull-left(href="#")
+                                img.img-responsive(src="assets/img/placeholder.jpg", alt="...", width="50", height="50")
+                            .media-body
+                                h4.media-heading Name Nachname <small><time datetime="2015-02-02">02. Februar 2015</time></small>
+                                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        .media
+                            a.pull-left(href="#")
+                                img.img-responsive(src="assets/img/placeholder.jpg", alt="...", width="50", height="50")
+                            .media-body
+                                h4.media-heading Name Nachname <small><time datetime="2015-02-02">02. Februar 2015</time></small>
+                                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        .media
+                            a.pull-left(href="#")
+                                img.img-responsive(src="assets/img/placeholder.jpg", alt="...", width="50", height="50")
+                            .media-body
+                                h4.media-heading Name Nachname <small><time datetime="2015-02-02">02. Februar 2015</time></small>
+                                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        
+                                
+                    //- Blog Sidebar
+                    .col-md-4
+                        //- Blog Suche
+                        include ./includes/blog.widget.search.jade
+                        //- Blog Kategorien
+                        include ./includes/blog.widget.categories.jade
+                        //- Blog Well
+                        include ./includes/blog.widget.well.jade
+                
+                
+            include ./includes/footer.jade
+            include ./includes/back-to-top-button.jade
+        
+        //- Java Scripts einbinden
+        script(src="assets/js/template.min.js")

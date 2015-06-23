@@ -1,0 +1,49 @@
+//- Seiten Variablen
+- var currentUrl = '/portfolio-2-col.html'
+- var sitename = 'Portfolio'
+//- Seiten Variablen
+
+doctype html
+html(lang="de")
+
+  include ./includes/head.jade
+
+  body#page-top
+    .site-wrapper
+        
+      include ./includes/nav/nav.jade
+      
+      section
+        .container
+            
+          .page-header: h1 Portfolio <small>Zweispaltig</small>
+          +breadcrumb
+            li.active Portfolio
+          
+          .row
+            .col-md-6.img-portfolio
+              include ./includes/portfolio.list-item-two-col.jade
+            .col-md-6.img-portfolio
+              include ./includes/portfolio.list-item-two-col.jade
+          .row
+            .col-md-6.img-portfolio
+              include ./includes/portfolio.list-item-two-col.jade
+            .col-md-6.img-portfolio
+              include ./includes/portfolio.list-item-two-col.jade
+          .row
+            .col-md-6.img-portfolio
+              include ./includes/portfolio.list-item-two-col.jade
+            .col-md-6.img-portfolio
+              include ./includes/portfolio.list-item-two-col.jade
+        
+        
+        //- Include Seiten Pagination
+        include ./includes/site.pagination.jade
+          
+          
+          
+      include ./includes/footer.jade
+      include ./includes/back-to-top-button.jade
+    
+    //- Java Scripts einbinden
+    script(src="assets/js/template.min.js")

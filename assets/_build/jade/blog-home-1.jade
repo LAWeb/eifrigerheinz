@@ -1,0 +1,49 @@
+//- Seiten Variablen
+- var currentUrl = '/blog-home-1.html'
+- var sitename = 'Blog Übersicht'
+//- Seiten Variablen
+
+doctype html
+html(lang="de")
+
+  include ./includes/head.jade
+
+  body#page-top
+    .site-wrapper
+      
+      include ./includes/nav/nav.jade
+      
+      section
+        .container
+            
+          .page-header: h1 Blog <small>Home 1</small>
+          +breadcrumb
+            li.active Blog
+            
+          .row
+            //- Blog Artikel Übersicht
+            .col-md-8
+                    
+              include ./includes/blog.list-item-blog-01.jade
+              hr
+              include ./includes/blog.list-item-blog-01.jade
+              hr
+              include ./includes/blog.list-item-blog-01.jade
+              hr
+              include ./includes/blog.pager.jade
+                
+            //- Blog Sidebar
+            .col-md-4
+              //- Blog Suche
+              include ./includes/blog.widget.search.jade
+              //- Blog Kategorien
+              include ./includes/blog.widget.categories.jade
+              //- Blog Well
+              include ./includes/blog.widget.well.jade
+          
+          
+      include ./includes/footer.jade
+      include ./includes/back-to-top-button.jade
+        
+    //- Java Scripts einbinden
+    script(src="assets/js/template.min.js")

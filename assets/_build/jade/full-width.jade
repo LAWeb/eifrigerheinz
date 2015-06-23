@@ -1,0 +1,31 @@
+//- Seiten Variablen
+- var currentUrl = '/full-width.html'
+- var sitename = 'Blanko Seite'
+//- Seiten Variablen
+
+doctype html
+html(lang="de")
+
+  include ./includes/head.jade
+
+  body#page-top
+    .site-wrapper
+        
+      include ./includes/nav/nav.jade
+      
+      section
+        .container
+          
+          .page-header: h1 Basis Seite <small>Blanke Seite</small>
+          +breadcrumb
+            li.active Full Width
+              
+          p.lead Introtext Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          
+          
+      include ./includes/footer.jade
+      include ./includes/back-to-top-button.jade
+    
+    //- Java Scripts einbinden
+    script(src="assets/js/template.min.js")

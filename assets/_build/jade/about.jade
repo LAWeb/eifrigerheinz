@@ -1,0 +1,25 @@
+//- Seiten Variablen
+- var currentUrl = '/about.html'
+- var sitename = 'Über uns'
+//- Seiten Variablen
+
+doctype html
+html(lang="de")
+
+  include ./includes/head.jade
+
+  body#page-top
+    .site-wrapper
+      
+      include ./includes/nav/nav.jade
+      
+      
+      include ./includes/section.intro-about.jade
+      include ./includes/section.team.jade
+      include ./includes/section.kunden-logos.jade
+          
+      include ./includes/footer.jade
+      include ./includes/back-to-top-button.jade
+    
+    //- Java Scripts einbinden
+    script(src="assets/js/template.min.js")

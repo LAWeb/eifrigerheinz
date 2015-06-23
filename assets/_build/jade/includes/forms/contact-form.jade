@@ -1,0 +1,9 @@
+h3 Unser Kontaktformular
+form(action="index.html", method="post", accept-charset="utf-8")
+  .row
+    +form-group("text", "vname", "Vorname", "Max", "col-md-6")
+    +form-group("text", "nname", "Nachname", "Mustermann", "col-md-6")
+  +form-group-addon-icon("email", "mail", "Email", "mustermann@muster.de", "", "fa-envelope-o")
+  +form-group("textarea", "message", "Nachricht", "Ihre Nachricht...")
+  
+  +btn('primary', 'submit')(class="pull-right") <i class="fa fa-send"><!----></i> Nachricht senden

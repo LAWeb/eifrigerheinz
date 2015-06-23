@@ -1,0 +1,26 @@
+//- Seiten Variablen
+- var currentUrl = '/index.html'
+- var sitename = 'Startseite'
+
+//- Seiten Variablen
+
+doctype html
+html(lang="de")
+
+  include ./includes/head.jade
+
+  body#page-top
+    .site-wrapper
+      include ./includes/nav/nav.jade
+            
+      include ./includes/header.slider.jade
+      include ./includes/section.intro.jade
+      include ./includes/section.referenzen-overview.jade
+      include ./includes/section.features.jade
+      include ./includes/section.well.jade
+
+      include ./includes/footer.jade
+      include ./includes/back-to-top-button.jade
+    
+    //- Java Scripts einbinden
+    script(src="assets/js/template.min.js")

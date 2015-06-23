@@ -1,0 +1,34 @@
+//- Seiten Variablen
+- var currentUrl = '/services.html'
+- var sitename = 'Services'
+//- Seiten Variablen
+
+doctype html
+html(lang="de")
+
+  include ./includes/head.jade
+
+  body#page-top
+    .site-wrapper
+            
+      include ./includes/nav/nav.jade
+            
+            
+      //- Section: Intro Service
+      section
+        .container
+                
+          .page-header: h1 Service <small>Unsere Leistungen im Überblick</small>
+          +breadcrumb
+            li.active Service Seite
+                
+      include ./includes/section.service-panels.jade
+      include ./includes/section.service-tabs.jade
+      include ./includes/section.service-pills.jade
+      include ./includes/section.service-liste.jade
+
+      include ./includes/footer.jade
+      include ./includes/back-to-top-button.jade
+        
+    //- Java Scripts einbinden
+    script(src="assets/js/template.min.js")

@@ -1,0 +1,71 @@
+//- Seiten Variablen
+- var currentUrl = '/portfolio-4-col.html'
+- var sitename = 'Portfolio'
+//- Seiten Variablen
+
+doctype html
+html(lang="de")
+
+  include ./includes/head.jade
+
+  body#page-top
+    .site-wrapper
+        
+      include ./includes/nav/nav.jade
+    
+      section
+        .container
+            
+          .page-header: h1 Portfolio <small>Vierspaltig</small>
+          +breadcrumb
+            li.active Portfolio
+          .row
+            .col-md-3.img-portfolio
+              a(href="portfolio-item.html")
+                img.img-responsive.img-thumbnail.img-hover(src='assets/img/placeholder.jpg', alt='...')
+            .col-md-3.img-portfolio
+              a(href="portfolio-item.html")
+                img.img-responsive.img-thumbnail.img-hover(src='assets/img/placeholder.jpg', alt='...')
+            .col-md-3.img-portfolio
+              a(href="portfolio-item.html")
+                img.img-responsive.img-thumbnail.img-hover(src='assets/img/placeholder.jpg', alt='...')
+            .col-md-3.img-portfolio
+              a(href="portfolio-item.html")
+                img.img-responsive.img-thumbnail.img-hover(src='assets/img/placeholder.jpg', alt='...')
+          .row
+            .col-md-3.img-portfolio
+              a(href="portfolio-item.html")
+                img.img-responsive.img-thumbnail.img-hover(src='assets/img/placeholder.jpg', alt='...')
+            .col-md-3.img-portfolio
+              a(href="portfolio-item.html")
+                img.img-responsive.img-thumbnail.img-hover(src='assets/img/placeholder.jpg', alt='...')
+            .col-md-3.img-portfolio
+              a(href="portfolio-item.html")
+                img.img-responsive.img-thumbnail.img-hover(src='assets/img/placeholder.jpg', alt='...')
+            .col-md-3.img-portfolio
+              a(href="portfolio-item.html")
+                img.img-responsive.img-thumbnail.img-hover(src='assets/img/placeholder.jpg', alt='...')
+          .row
+            .col-md-3.img-portfolio
+              a(href="portfolio-item.html")
+                img.img-responsive.img-thumbnail.img-hover(src='assets/img/placeholder.jpg', alt='...')
+            .col-md-3.img-portfolio
+              a(href="portfolio-item.html")
+                img.img-responsive.img-thumbnail.img-hover(src='assets/img/placeholder.jpg', alt='...')
+            .col-md-3.img-portfolio
+              a(href="portfolio-item.html")
+                img.img-responsive.img-thumbnail.img-hover(src='assets/img/placeholder.jpg', alt='...')
+            .col-md-3.img-portfolio
+              a(href="portfolio-item.html")
+                img.img-responsive.img-thumbnail.img-hover(src='assets/img/placeholder.jpg', alt='...')
+          
+          hr
+          
+          //- Include Seiten Pagination
+          include ./includes/site.pagination.jade
+
+      include ./includes/footer.jade
+      include ./includes/back-to-top-button.jade
+    
+    //- Java Scripts einbinden
+    script(src="assets/js/template.min.js")

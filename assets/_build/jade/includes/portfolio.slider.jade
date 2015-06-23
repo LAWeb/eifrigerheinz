@@ -1,0 +1,23 @@
+#carousel-example-generic.carousel.slide(data-ride="carousel")
+    
+    //- Indicators
+    ol.carousel-indicators
+        li.active(data-target='#carousel-example-generic', data-slide-to='0')
+        li(data-target='#carousel-example-generic', data-slide-to='1')
+        li(data-target='#carousel-example-generic', data-slide-to='2')
+    
+    //- Wrapper für die Slides
+    .carousel-inner
+        
+        .item.active
+            img.img-responsive(src="assets/img/placeholder.jpg", alt="...")
+
+        .item
+            img.img-responsive(src="assets/img/placeholder.jpg", alt="...")
+
+        .item
+            img.img-responsive(src="assets/img/placeholder.jpg", alt="...")
+
+    //- Controls
+    a.left.carousel-control(href='#carousel-example-generic', data-slide='prev'): span.icon-prev
+    a.right.carousel-control(href='#carousel-example-generic', data-slide='next'): span.icon-next

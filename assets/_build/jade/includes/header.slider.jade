@@ -1,0 +1,29 @@
+header#myCarousel.carousel.slide
+    
+    //- Indicators
+    ol.carousel-indicators
+        li.active(data-target='#myCarousel', data-slide-to='0')
+        li(data-target='#myCarousel', data-slide-to='1')
+        li(data-target='#myCarousel', data-slide-to='2')
+    
+    //- Wrapper für die Slides
+    .carousel-inner
+        
+        .item.active
+            .fill(style='background-image:url(assets/img/placeholder.jpg)')
+                .carousel-caption
+                    h2 Slider Überschrift
+
+        .item
+            .fill(style='background-image:url(assets/img/placeholder.jpg)')
+                .carousel-caption
+                    h2 Slider Überschrift
+
+        .item
+            .fill(style='background-image:url(assets/img/placeholder.jpg)')
+                .carousel-caption
+                    h2 Slider Überschrift
+
+    //- Controls
+    a.left.carousel-control(href='#myCarousel', data-slide='prev'): span.icon-prev
+    a.right.carousel-control(href='#myCarousel', data-slide='next'): span.icon-next

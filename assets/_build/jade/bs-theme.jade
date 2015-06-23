@@ -1,0 +1,766 @@
+//- Seiten Variablen
+- var currentUrl = '/bs-theme.html'
+- var sitename = 'Bootstrap Elemente'
+//- Seiten Variablen
+
+doctype html
+html(lang="de")
+
+
+    include ./includes/head.jade
+    
+
+
+    body#page-top
+        .site-wrapper
+            
+            include ./includes/nav/nav.jade
+            
+            section
+              .container.theme-showcase(role='main')
+                
+                    .page-header: h1 Bootstap Theme <small>Alle Bootstrap Elemente</small>
+                    +breadcrumb
+                      li.active Bootstrap Theme
+                    
+                    //- Styles nur für die Bootstrap Elemente Seite. Zwecks Übersichtlichkeit
+                    style.
+                      .page-header h2 {
+                         margin-top: 5em;
+                      }
+                      .theme-dropdown .dropdown-menu {
+                        position: static;
+                        display: block;
+                        margin-bottom: 20px;
+                      }
+                      
+                      .theme-showcase > p > .btn {
+                        margin: 5px 0;
+                      }
+                      
+                      .theme-showcase .navbar .container {
+                        width: auto;
+                      }
+                    
+                    // Main jumbotron for a primary marketing message or call to action
+                    .jumbotron
+                      h1 Theme example
+                      p
+                        | This is a template showcasing the optional theme stylesheet included in Bootstrap. Use it as a starting point to create something more unique by building on or modifying it.
+                    
+                    
+                    .page-header
+                      h2 Buttons
+                    p
+                      button.btn.btn-lg.btn-default(type='button') Default
+                      button.btn.btn-lg.btn-primary(type='button') Primary
+                      button.btn.btn-lg.btn-success(type='button') Success
+                      button.btn.btn-lg.btn-info(type='button') Info
+                      button.btn.btn-lg.btn-warning(type='button') Warning
+                      button.btn.btn-lg.btn-danger(type='button') Danger
+                      button.btn.btn-lg.btn-link(type='button') Link
+                    p
+                      button.btn.btn-default(type='button') Default
+                      button.btn.btn-primary(type='button') Primary
+                      button.btn.btn-success(type='button') Success
+                      button.btn.btn-info(type='button') Info
+                      button.btn.btn-warning(type='button') Warning
+                      button.btn.btn-danger(type='button') Danger
+                      button.btn.btn-link(type='button') Link
+                    p
+                      button.btn.btn-sm.btn-default(type='button') Default
+                      button.btn.btn-sm.btn-primary(type='button') Primary
+                      button.btn.btn-sm.btn-success(type='button') Success
+                      button.btn.btn-sm.btn-info(type='button') Info
+                      button.btn.btn-sm.btn-warning(type='button') Warning
+                      button.btn.btn-sm.btn-danger(type='button') Danger
+                      button.btn.btn-sm.btn-link(type='button') Link
+                    p
+                      button.btn.btn-xs.btn-default(type='button') Default
+                      button.btn.btn-xs.btn-primary(type='button') Primary
+                      button.btn.btn-xs.btn-success(type='button') Success
+                      button.btn.btn-xs.btn-info(type='button') Info
+                      button.btn.btn-xs.btn-warning(type='button') Warning
+                      button.btn.btn-xs.btn-danger(type='button') Danger
+                      button.btn.btn-xs.btn-link(type='button') Link
+                    
+                    
+                    .page-header
+                      h2 Tables
+                    .row
+                      .col-md-6
+                        table.table
+                          thead
+                            tr
+                              th #
+                              th First Name
+                              th Last Name
+                              th Username
+                          tbody
+                            tr
+                              td 1
+                              td Mark
+                              td Otto
+                              td @mdo
+                            tr
+                              td 2
+                              td Jacob
+                              td Thornton
+                              td @fat
+                            tr
+                              td 3
+                              td Larry
+                              td the Bird
+                              td @twitter
+                      .col-md-6
+                        table.table.table-striped
+                          thead
+                            tr
+                              th #
+                              th First Name
+                              th Last Name
+                              th Username
+                          tbody
+                            tr
+                              td 1
+                              td Mark
+                              td Otto
+                              td @mdo
+                            tr
+                              td 2
+                              td Jacob
+                              td Thornton
+                              td @fat
+                            tr
+                              td 3
+                              td Larry
+                              td the Bird
+                              td @twitter
+                    .row
+                      .col-md-6
+                        table.table.table-bordered
+                          thead
+                            tr
+                              th #
+                              th First Name
+                              th Last Name
+                              th Username
+                          tbody
+                            tr
+                              td(rowspan='2') 1
+                              td Mark
+                              td Otto
+                              td @mdo
+                            tr
+                              td Mark
+                              td Otto
+                              td @TwBootstrap
+                            tr
+                              td 2
+                              td Jacob
+                              td Thornton
+                              td @fat
+                            tr
+                              td 3
+                              td(colspan='2') Larry the Bird
+                              td @twitter
+                      .col-md-6
+                        table.table.table-condensed
+                          thead
+                            tr
+                              th #
+                              th First Name
+                              th Last Name
+                              th Username
+                          tbody
+                            tr
+                              td 1
+                              td Mark
+                              td Otto
+                              td @mdo
+                            tr
+                              td 2
+                              td Jacob
+                              td Thornton
+                              td @fat
+                            tr
+                              td 3
+                              td(colspan='2') Larry the Bird
+                              td @twitter
+                    
+                    
+                    .page-header
+                      h2 Thumbnails / Images
+                      .row
+                        .col-md-4
+                          img.img-responsive.img-rounded(src='assets/img/placeholder-q.jpg', alt='...')
+                        .col-md-4
+                          img.img-responsive.img-circle(src='assets/img/placeholder-q.jpg', alt='...')
+                        .col-md-4
+                          img.img-responsive.img-thumbnail(src='assets/img/placeholder-q.jpg', alt='...')
+                          
+                    
+                    
+                    .page-header
+                      h2 Labels
+                    h1
+                      span.label.label-default Default
+                      span.label.label-primary Primary
+                      span.label.label-success Success
+                      span.label.label-info Info
+                      span.label.label-warning Warning
+                      span.label.label-danger Danger
+                    h2
+                      span.label.label-default Default
+                      span.label.label-primary Primary
+                      span.label.label-success Success
+                      span.label.label-info Info
+                      span.label.label-warning Warning
+                      span.label.label-danger Danger
+                    h3
+                      span.label.label-default Default
+                      span.label.label-primary Primary
+                      span.label.label-success Success
+                      span.label.label-info Info
+                      span.label.label-warning Warning
+                      span.label.label-danger Danger
+                    h4
+                      span.label.label-default Default
+                      span.label.label-primary Primary
+                      span.label.label-success Success
+                      span.label.label-info Info
+                      span.label.label-warning Warning
+                      span.label.label-danger Danger
+                    h5
+                      span.label.label-default Default
+                      span.label.label-primary Primary
+                      span.label.label-success Success
+                      span.label.label-info Info
+                      span.label.label-warning Warning
+                      span.label.label-danger Danger
+                    h6
+                      span.label.label-default Default
+                      span.label.label-primary Primary
+                      span.label.label-success Success
+                      span.label.label-info Info
+                      span.label.label-warning Warning
+                      span.label.label-danger Danger
+                    p
+                      span.label.label-default Default
+                      span.label.label-primary Primary
+                      span.label.label-success Success
+                      span.label.label-info Info
+                      span.label.label-warning Warning
+                      span.label.label-danger Danger
+                    
+                    
+                    .page-header
+                      h2 Badges
+                    p
+                      a(href='#')
+                        | Inbox 
+                        span.badge 42
+                    ul.nav.nav-pills(role='tablist')
+                      li.active(role='presentation')
+                        a(href='#')
+                          | Home 
+                          span.badge 42
+                      li(role='presentation')
+                        a(href='#') Profile
+                      li(role='presentation')
+                        a(href='#')
+                          | Messages 
+                          span.badge 3
+                    
+                    
+                    .page-header
+                      h2 Forms & Elements
+                    .row
+                      .col-md-6.col-sm-6.col-xs-12
+                        
+                            h3 Input Sizing
+                          
+                            .input-group.input-group-lg
+                              span.input-group-addon @
+                              input.form-control.input-lg(type='text', placeholder='Username')
+                            br
+                            .input-group
+                              span.input-group-addon $
+                              input.form-control(type='text', placeholder='Currency')
+                            br
+                            .input-group.input-group-sm
+                              span.input-group-addon {}
+                              input.form-control(type='text', placeholder='Code')
+                              
+                      .col-md-6.col-sm-6.col-xs-12
+                        
+                            h3 Height Sizing
+                          
+                            select.form-control.input-lg
+                              option(value='') .input-lg
+                            br
+                            select.form-control
+                              option(value='') Default select
+                            br
+                            select.form-control.input-sm
+                              option(value='') .input-sm
+                    
+                    .row
+                      .col-md-12.col-sm-12.col-xs-12
+                        
+                            h3 Input Groups
+                          
+                            .row
+                              .col-lg-4.col-sm-4
+                                .input-group
+                                  span.input-group-addon @
+                                  input.form-control(placeholder='Username', type='text')
+                              .col-lg-4.col-sm-4
+                                .input-group
+                                  input.form-control(type='text')
+                                  span.input-group-addon .00
+                              .col-lg-4.col-sm-4
+                                .input-group
+                                  span.input-group-addon $
+                                  input.form-control(type='text')
+                                  span.input-group-addon .00
+                    
+                    .row
+                      .col-md-12.col-sm-12.col-xs-12
+                        
+                            h3 Button Addons
+                          
+                            .row
+                              .col-lg-6.col-sm-6.col-sx-6
+                                .input-group
+                                  span.input-group-btn
+                                    button.btn.btn-default(type='button', title='') Go!
+                                  input.form-control(type='text')
+                              
+                              .col-lg-6.col-sm-6.col-sx-6
+                                .input-group
+                                  input.form-control(type='text')
+                                  span.input-group-btn
+                                    button.btn.btn-default(type='button', data-original-title='', title='') Submit!
+                    
+                    .row
+                      .col-md-12.col-sm-12.col-xs-12
+                        
+                            h3 Check Boxes & Radio Addons
+                          
+                            .row
+                              .col-md-3.col-sm-3
+                                .input-group
+                                  span.input-group-addon
+                                    input(type='checkbox')
+                                  input.form-control(type='text')
+                              
+                              .col-md-3.col-sm-3
+                                .input-group
+                                  span.input-group-addon
+                                    input(checked='', type='checkbox')
+                                  input.form-control(type='text')
+                              
+                              .col-md-3.col-sm-3
+                                .input-group
+                                  span.input-group-addon
+                                    input#optionsRadiosX(name='optionsRadio', value='optionx', type='radio')
+                                  input.form-control(type='text')
+                              
+                              .col-md-3.col-sm-3
+                                .input-group
+                                  span.input-group-addon
+                                    input#optionsRadiosY(name='optionsRadio', value='optiony', checked='', type='radio')
+                                  input.form-control(type='text')
+                    
+                    .row
+                      .col-md-6.col-sm-6.col-xs-12
+                        
+                            h3 Check boxes
+                          
+                            label.checkbox-inline
+                              input#inlineCheckbox1(value='option1', checked='', type='checkbox')
+                              |  1
+                            label.checkbox-inline
+                              input#inlineCheckbox2(value='option2', type='checkbox')
+                              |  2
+                            label.checkbox-inline
+                              input#inlineCheckbox3(value='option3', disabled='', type='checkbox')
+                              |  3
+                      
+                      .col-md-6.col-sm-6.col-xs-12
+                        
+                            h3 Radio buttons
+                          
+                            label.radio-inline
+                              input#optionsRadios1(name='optionsRadios', value='option1', checked='', type='radio')
+                              |  1
+                            label.radio-inline
+                              input#optionsRadios2(name='optionsRadios', value='option2', type='radio')
+                              | 2
+                            label.radio-inline
+                              input#optionsRadios3(name='optionsRadios', value='option2', disabled='', type='radio')
+                              | 3
+                    
+                    .row
+                      .col-md-12.col-sm-12.col-xs-12
+                        
+                            h3 Inline Form
+                          
+                            form.form-inline(role='form')
+                              .form-group
+                                label.sr-only(for='exampleInputEmail2') Email address
+                                input#exampleInputEmail2.form-control(placeholder='Enter email', type='email')
+                              .form-group
+                                label.sr-only(for='exampleInputPassword2') Password
+                                input#exampleInputPassword2.form-control(placeholder='Password', type='password')
+                              .checkbox
+                                label
+                                  input(type='checkbox')
+                                  |  Remember me
+                              button.btn.btn-info(type='submit', title='') Sign in
+                    
+                    .row
+                      .col-md-12.col-sm-12.col-xs-12
+                        
+                            h3 Inputs
+                          
+                            form.form-horizontal.row-border(action='#')
+                              .form-group
+                                label.col-md-2.control-label Default input field
+                                .col-md-10
+                                  input.form-control(name='regular', type='text')
+                              .form-group
+                                label.col-md-2.control-label Password
+                                .col-md-10
+                                  input.form-control(name='pass', type='password')
+                              .form-group
+                                label.col-md-2.control-label With placeholder
+                                .col-md-10
+                                  input.form-control(name='placeholder', placeholder='placeholder', type='text')
+                              .form-group
+                                label.col-md-2.control-label Disabled field
+                                .col-md-10
+                                  input.form-control(name='disabled', disabled='disabled', value='disabled', type='text')
+                              .form-group
+                                label.col-md-2.control-label Read only field
+                                .col-md-10
+                                  input.form-control(name='readonly', readonly='', value='read only', type='text')
+                              .form-group
+                                label.col-md-2.control-label Help text
+                                .col-md-10
+                                  input.form-control(name='regular', type='text')
+                                  span.help-block A block of help text that breaks onto a new line and may extend beyond one line.
+                              .form-group
+                                label.col-md-2.control-label Predefined value
+                                .col-md-10
+                                  input.form-control(name='regular', value='http://', type='text')
+                              .form-group
+                                label.col-md-2.control-label With icon
+                                .col-md-10
+                                  input.form-control(name='regular', type='text')
+                                  i.icon-pencil.input-icon
+                              .form-group
+                                label.col-md-2.control-label(for='labelfor') Clickable label
+                                .col-md-10
+                                  input#labelfor.form-control(name='labelfor', type='text')
+                              .form-group
+                                label.col-md-2.control-label Column sizing
+                                .col-md-10
+                                  .row
+                                    .col-xs-3
+                                      input.form-control(placeholder='.col-xs-3', type='text')
+                                    .col-xs-5
+                                      input.form-control(placeholder='.col-xs-5', type='text')
+                                    .col-xs-4
+                                      input.form-control(placeholder='.col-xs-4', type='text')
+                              .form-group.has-success
+                                label.col-md-2.control-label Input success
+                                .col-md-10
+                                  input#inputSuccess.form-control(placeholder='Input Success', type='text')
+                                  i.icon-pencil.input-icon.success
+                              .form-group.has-warning
+                                label.col-md-2.control-label Input warning
+                                .col-md-10
+                                  input#inputWarning.form-control(placeholder='Input Warning', type='text')
+                                  i.icon-pencil.input-icon.warning
+                              .form-group.has-error
+                                label.col-md-2.control-label Input error
+                                .col-md-10
+                                  input#inputError.form-control(placeholder='Input Error', type='text')
+                                  i.icon-pencil.input-icon.error
+
+
+
+                    
+                    
+                    .page-header
+                      h2 Dropdown menus
+                    .dropdown.theme-dropdown.clearfix
+                      a#dropdownMenu1.sr-only.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                        | Dropdown 
+                        span.caret
+                      ul.dropdown-menu(aria-labelledby='dropdownMenu1')
+                        li.active
+                          a(href='#') Action
+                        li
+                          a(href='#') Another action
+                        li
+                          a(href='#') Something else here
+                        li.divider(role='separator')
+                        li
+                          a(href='#') Separated link
+                    
+                    
+                    .page-header
+                      h2 Navs
+                    ul.nav.nav-tabs(role='tablist')
+                      li.active(role='presentation')
+                        a(href='#') Home
+                      li(role='presentation')
+                        a(href='#') Profile
+                      li(role='presentation')
+                        a(href='#') Messages
+                    ul.nav.nav-pills(role='tablist')
+                      li.active(role='presentation')
+                        a(href='#') Home
+                      li(role='presentation')
+                        a(href='#') Profile
+                      li(role='presentation')
+                        a(href='#') Messages
+                    
+                    
+                    .page-header
+                      h2 Navbars
+                    nav.navbar.navbar-default
+                      .container
+                        .navbar-header
+                          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                            span.sr-only Toggle navigation
+                            span.icon-bar
+                            span.icon-bar
+                            span.icon-bar
+                          a.navbar-brand(href='#') Project name
+                        .navbar-collapse.collapse
+                          ul.nav.navbar-nav
+                            li.active
+                              a(href='#') Home
+                            li
+                              a(href='#about') About
+                            li
+                              a(href='#contact') Contact
+                            li.dropdown
+                              a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                                | Dropdown 
+                                span.caret
+                              ul.dropdown-menu
+                                li
+                                  a(href='#') Action
+                                li
+                                  a(href='#') Another action
+                                li
+                                  a(href='#') Something else here
+                                li.divider(role='separator')
+                                li.dropdown-header Nav header
+                                li
+                                  a(href='#') Separated link
+                                li
+                                  a(href='#') One more separated link
+                        // /.nav-collapse
+                    nav.navbar.navbar-inverse
+                      .container
+                        .navbar-header
+                          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                            span.sr-only Toggle navigation
+                            span.icon-bar
+                            span.icon-bar
+                            span.icon-bar
+                          a.navbar-brand(href='#') Project name
+                        .navbar-collapse.collapse
+                          ul.nav.navbar-nav
+                            li.active
+                              a(href='#') Home
+                            li
+                              a(href='#about') About
+                            li
+                              a(href='#contact') Contact
+                            li.dropdown
+                              a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                                | Dropdown 
+                                span.caret
+                              ul.dropdown-menu
+                                li
+                                  a(href='#') Action
+                                li
+                                  a(href='#') Another action
+                                li
+                                  a(href='#') Something else here
+                                li.divider(role='separator')
+                                li.dropdown-header Nav header
+                                li
+                                  a(href='#') Separated link
+                                li
+                                  a(href='#') One more separated link
+                        // /.nav-collapse
+                    
+                    
+                    .page-header
+                      h2 Alerts
+                    .alert.alert-success(role='alert')
+                      strong Well done!
+                      |  You successfully read this important alert message.
+                    .alert.alert-info(role='alert')
+                      strong Heads up!
+                      |  This alert needs your attention, but it's not super important.
+                    .alert.alert-warning(role='alert')
+                      strong Warning!
+                      |  Best check yo self, you're not looking too good.
+                    .alert.alert-danger(role='alert')
+                      strong Oh snap!
+                      |  Change a few things up and try submitting again.
+                    
+                    
+                    .page-header
+                      h2 Progress bars
+                    .progress
+                      .progress-bar(role='progressbar', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100', style='width: 60%;')
+                        span.sr-only 60% Complete
+                    .progress
+                      .progress-bar.progress-bar-success(role='progressbar', aria-valuenow='40', aria-valuemin='0', aria-valuemax='100', style='width: 40%')
+                        span.sr-only 40% Complete (success)
+                    .progress
+                      .progress-bar.progress-bar-info(role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100', style='width: 20%')
+                        span.sr-only 20% Complete
+                    .progress
+                      .progress-bar.progress-bar-warning(role='progressbar', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100', style='width: 60%')
+                        span.sr-only 60% Complete (warning)
+                    .progress
+                      .progress-bar.progress-bar-danger(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100', style='width: 80%')
+                        span.sr-only 80% Complete (danger)
+                    .progress
+                      .progress-bar.progress-bar-striped(role='progressbar', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100', style='width: 60%')
+                        span.sr-only 60% Complete
+                    .progress
+                      .progress-bar.progress-bar-success(style='width: 35%')
+                        span.sr-only 35% Complete (success)
+                      .progress-bar.progress-bar-warning(style='width: 20%')
+                        span.sr-only 20% Complete (warning)
+                      .progress-bar.progress-bar-danger(style='width: 10%')
+                        span.sr-only 10% Complete (danger)
+                    
+                    
+                    .page-header
+                      h2 List groups
+                    .row
+                      .col-sm-4
+                        ul.list-group
+                          li.list-group-item Cras justo odio
+                          li.list-group-item Dapibus ac facilisis in
+                          li.list-group-item Morbi leo risus
+                          li.list-group-item Porta ac consectetur ac
+                          li.list-group-item Vestibulum at eros
+                      // /.col-sm-4
+                      .col-sm-4
+                        .list-group
+                          a.list-group-item.active(href='#')
+                            | Cras justo odio
+                          a.list-group-item(href='#') Dapibus ac facilisis in
+                          a.list-group-item(href='#') Morbi leo risus
+                          a.list-group-item(href='#') Porta ac consectetur ac
+                          a.list-group-item(href='#') Vestibulum at eros
+                      // /.col-sm-4
+                      .col-sm-4
+                        .list-group
+                          a.list-group-item.active(href='#')
+                            h4.list-group-item-heading List group item heading
+                            p.list-group-item-text
+                              | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+                          a.list-group-item(href='#')
+                            h4.list-group-item-heading List group item heading
+                            p.list-group-item-text
+                              | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+                          a.list-group-item(href='#')
+                            h4.list-group-item-heading List group item heading
+                            p.list-group-item-text
+                              | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+                      // /.col-sm-4
+                    
+                    
+                    .page-header
+                      h2 Panels
+                    .row
+                      .col-sm-4
+                        .panel.panel-default
+                          .panel-heading
+                            h3.panel-title Panel title
+                          .panel-body
+                            | Panel content
+                        .panel.panel-primary
+                          .panel-heading
+                            h3.panel-title Panel title
+                          .panel-body
+                            | Panel content
+                      // /.col-sm-4
+                      .col-sm-4
+                        .panel.panel-success
+                          .panel-heading
+                            h3.panel-title Panel title
+                          .panel-body
+                            | Panel content
+                        .panel.panel-info
+                          .panel-heading
+                            h3.panel-title Panel title
+                          .panel-body
+                            | Panel content
+                      // /.col-sm-4
+                      .col-sm-4
+                        .panel.panel-warning
+                          .panel-heading
+                            h3.panel-title Panel title
+                          .panel-body
+                            | Panel content
+                        .panel.panel-danger
+                          .panel-heading
+                            h3.panel-title Panel title
+                          .panel-body
+                            | Panel content
+                      // /.col-sm-4
+                    
+                    
+                    .page-header
+                      h2 Wells
+                    .well
+                      p
+                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.
+                    
+                    
+                    .page-header
+                      h2 Carousel
+                    #carousel-example-generic.carousel.slide(data-ride='carousel')
+                      ol.carousel-indicators
+                        li(data-target='#carousel-example-generic', data-slide-to='0')
+                        li.active(data-target='#carousel-example-generic', data-slide-to='1')
+                        li(data-target='#carousel-example-generic', data-slide-to='2')
+                      .carousel-inner(role='listbox')
+                        .item
+                          img(data-src='holder.js/1140x500/auto/#777:#555/text:First slide', alt='First slide [1140x500]', src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTE0MCIgaGVpZ2h0PSI1MDAiIHZpZXdCb3g9IjAgMCAxMTQwIDUwMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvMTE0MHg1MDAvYXV0by8jNzc3OiM1NTUvdGV4dDpGaXJzdCBzbGlkZQpDcmVhdGVkIHdpdGggSG9sZGVyLmpzIDIuNi4wLgpMZWFybiBtb3JlIGF0IGh0dHA6Ly9ob2xkZXJqcy5jb20KKGMpIDIwMTItMjAxNSBJdmFuIE1hbG9waW5za3kgLSBodHRwOi8vaW1za3kuY28KLS0+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48IVtDREFUQVsjaG9sZGVyXzE0ZTFhMGY4ZGQwIHRleHQgeyBmaWxsOiM1NTU7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6NTdwdCB9IF1dPjwvc3R5bGU+PC9kZWZzPjxnIGlkPSJob2xkZXJfMTRlMWEwZjhkZDAiPjxyZWN0IHdpZHRoPSIxMTQwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzc3NyIvPjxnPjx0ZXh0IHg9IjM5MC41IiB5PSIyNzUuNDc2NTYyNSI+Rmlyc3Qgc2xpZGU8L3RleHQ+PC9nPjwvZz48L3N2Zz4=', data-holder-rendered='true')
+                        .item.active
+                          img(data-src='holder.js/1140x500/auto/#666:#444/text:Second slide', alt='Second slide [1140x500]', src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTE0MCIgaGVpZ2h0PSI1MDAiIHZpZXdCb3g9IjAgMCAxMTQwIDUwMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvMTE0MHg1MDAvYXV0by8jNjY2OiM0NDQvdGV4dDpTZWNvbmQgc2xpZGUKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNGUxYTBmM2Y0MiB0ZXh0IHsgZmlsbDojNDQ0O2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjU3cHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE0ZTFhMGYzZjQyIj48cmVjdCB3aWR0aD0iMTE0MCIgaGVpZ2h0PSI1MDAiIGZpbGw9IiM2NjYiLz48Zz48dGV4dCB4PSIzMzUuNTkzNzUiIHk9IjI3NS40NzY1NjI1Ij5TZWNvbmQgc2xpZGU8L3RleHQ+PC9nPjwvZz48L3N2Zz4=', data-holder-rendered='true')
+                        .item
+                          img(data-src='holder.js/1140x500/auto/#555:#333/text:Third slide', alt='Third slide [1140x500]', src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTE0MCIgaGVpZ2h0PSI1MDAiIHZpZXdCb3g9IjAgMCAxMTQwIDUwMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvMTE0MHg1MDAvYXV0by8jNTU1OiMzMzMvdGV4dDpUaGlyZCBzbGlkZQpDcmVhdGVkIHdpdGggSG9sZGVyLmpzIDIuNi4wLgpMZWFybiBtb3JlIGF0IGh0dHA6Ly9ob2xkZXJqcy5jb20KKGMpIDIwMTItMjAxNSBJdmFuIE1hbG9waW5za3kgLSBodHRwOi8vaW1za3kuY28KLS0+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48IVtDREFUQVsjaG9sZGVyXzE0ZTFhMGYzZThmIHRleHQgeyBmaWxsOiMzMzM7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6NTdwdCB9IF1dPjwvc3R5bGU+PC9kZWZzPjxnIGlkPSJob2xkZXJfMTRlMWEwZjNlOGYiPjxyZWN0IHdpZHRoPSIxMTQwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzU1NSIvPjxnPjx0ZXh0IHg9IjM3Ny44NTkzNzUiIHk9IjI3NS40NzY1NjI1Ij5UaGlyZCBzbGlkZTwvdGV4dD48L2c+PC9nPjwvc3ZnPg==', data-holder-rendered='true')
+                      a.left.carousel-control(href='#carousel-example-generic', role='button', data-slide='prev')
+                        span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+                        span.sr-only Previous
+                      a.right.carousel-control(href='#carousel-example-generic', role='button', data-slide='next')
+                        span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+                        span.sr-only Next
+
+
+                
+            include ./includes/footer.jade
+            
+            include ./includes/back-to-top-button.jade
+        
+        //- Java Scripts einbinden
+        script(src="http://maps.google.com/maps/api/js?sensor=false")
+        script(src="assets/js/template.min.js")

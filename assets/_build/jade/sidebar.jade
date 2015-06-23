@@ -1,0 +1,56 @@
+//- Seiten Variablen
+- var currentUrl = '/sidebar.html'
+- var sitename = 'Sitebar Seite'
+//- Seiten Variablen
+
+doctype html
+html(lang="de")
+
+  include ./includes/head.jade
+
+  body#page-top
+    .site-wrapper
+        
+      include ./includes/nav/nav.jade
+      
+      section
+        .container
+          
+          .page-header: h1 Sidebar Page <small>Blanke Seite mit Sidebar</small>
+          +breadcrumb
+            li.active Sidebar Page
+          
+          .row
+            //- Sidebar
+            .col-md-3
+              .list-group
+                a.list-group-item(href="index.jade.html", title="...") Startseite
+                a.list-group-item(href="about.jade.html", title="...") Über uns
+                a.list-group-item(href="services.jade.html", title="...") Services
+                a.list-group-item(href="contact.jade.html", title="...") Kontakt
+                a.list-group-item(href="portfolio-1-col.jade.html", title="...") 1 Column Porfolio
+                a.list-group-item(href="portfolio-2-col.jade.html", title="...") 2 Column Porfolio
+                a.list-group-item(href="portfolio-3-col.jade.html", title="...") 3 Column Porfolio
+                a.list-group-item(href="portfolio-4-col.jade.html", title="...") 4 Column Porfolio
+                a.list-group-item(href="portfolio-item.jade.html", title="...") Single Portfolio Item
+                a.list-group-item(href="blog-home-1.jade.html", title="...") Blog Home 1
+                a.list-group-item(href="blog-home-2.jade.html", title="...") Blog Home 2
+                a.list-group-item(href="blog-post.jade.html", title="...") Blog Post
+                a.list-group-item(href="full-width.jade.html", title="...") Full Width Page
+                a.list-group-item.active(href="", title="...") Sidebar-page
+                a.list-group-item(href="faq.jade.html", title="...") FAQ Seite
+                a.list-group-item(href="404.jade.html", title="...") 404 Seite
+                a.list-group-item(href="pricing.jade.html", title="...") Preis Tabellen
+              
+            //- Seiten Inhalt
+            .col-md-9
+              section
+                .page-header: h2 Seiten Inhalt
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          
+          
+      include ./includes/footer.jade
+      include ./includes/back-to-top-button.jade
+    
+    //- Java Scripts einbinden
+    script(src="assets/js/template.min.js")

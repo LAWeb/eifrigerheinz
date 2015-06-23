@@ -1,0 +1,31 @@
+//- Seiten Variablen
+- var currentUrl = '/404.html'
+- var sitename = '404'
+//- Seiten Variablen
+
+doctype html
+html(lang="de")
+
+  include ./includes/head.jade
+
+  body#page-top
+    .site-wrapper
+      
+      include ./includes/nav/nav.jade
+      
+      section
+        .container
+            
+          .page-header: h1 404 <small>Seite nicht gefunden</small>
+          +breadcrumb
+            li.active 404 Seite
+          
+          .jumbotron
+            h1: span.error-404 404
+            p Seite nicht gefunden!
+
+      include ./includes/footer.jade
+      include ./includes/back-to-top-button.jade
+    
+    //- Java Scripts einbinden
+    script(src="assets/js/template.min.js")
